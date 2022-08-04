@@ -1,0 +1,80 @@
+// NAVIGATION //
+
+* SEE CURRENT DIRECTORY
+pwd
+
+
+* VIEW FILES AND FOLDERS IN CURRENT DIRECTORY
+ls
+
+ls -a (all, include hidden)
+ls -l (long)
+ls -la (both)
+
+ls <sub_dir1>/<sub_dir2>/ (see into a non current directory)
+
+
+* CHANGE DIRECTORY
+cd <dir1>/<dir3>/<dir3>/etc
+cd (back to home directory) also cd ~
+cd ~/<dir1>/etc (go to dir child to home dir)
+
+
+* PARENT DIRECTORY
+..
+cd ../.. (go back twice)
+
+
+* CURRENT DIRECTORY
+.
+
+
+* CLEAR COMMAND LINE
+clear
+
+----------------------------------------------------------
+// MANAGING FILES AND DIRECTORIES //
+
+* MAKE DIRECTORY
+mkdir <name>
+
+
+* ADD FILE
+touch <name.extension>
+
+
+* REMOVE FILE
+rm (and its variations)
+rm -rf (delete non-empty directories forcefully)
+
+
+* ACCESS AND MODIFY FILES
+code <file_name> (opens file in text editor. e.g. VSCode)
+nano <file_name> (opens file in pre-installed Nano text editor) 
+source <file_name> (read and execute content after changes)
+
+
+----------------------------------------------------------
+// SHELL PROGRAM //
+
+code ~/.bashrc or ~/.zshrc (access and modify shell)
+source ~/.bashrc or ~/.zshrc (read and execute content after changes)
+exec bash or zsh (execute shell program)
+
+
+----------------------------------------------------------
+// LINKS AND ALIASES //
+
+* LINKS
+ln -s <directory path> <link's name> (symbolic link)
+rm <link's name> (remove the link)
+
+
+* ALIAS
+alias (see list of aliases)
+alias chrome="/mnt/c/'Program Files (x86)'/Google/Chrome/Application/chrome.exe"
+
+
+
+
+

@@ -1,0 +1,103 @@
+// GIT COMMANDS // 
+
+* FIRST STEPS:
+git --version
+
+git config --global user.name "Name"
+git config --global user.email "email@"
+
+git config --list
+
+
+* HELP:
+git help config || git config --help
+
+
+* RENAME MASTER BRANCH TO MAIN
+git branch -M main
+
+
+* STOP TRACKING REPOSITORY
+rm -rf .git
+
+
+* INITIALIZING FROM EXISTING CODE:
+git init
+git status
+
+
+* ADD FILES TO STAGING AREA:
+git add -A
+git status
+
+
+* COMMIT
+git add -A
+git commit -m "Comment"
+git status
+git log (track commits)
+
+
+* TRACK EXISTING REMOTE PROJECT
+git clone <url> <where to clone> (use . if current directory)
+
+
+* INFO ABOUT REMOTE REPOSITORY
+git remote -v
+git branch -a
+
+
+* PUSHING CHANGES
+git diff
+git status
+git add -A
+git commit -m "Comment"
+
+git pull origin master (or main)
+git push origin master (or main)
+
+
+* CREATE A BRANCH
+git branch <branch_name>
+git checkout <branch_name>
+
+
+* AFTER COMMIT PUSH BRANCH TO REMOTE
+git push -u origin <branch_name>
+git branch -a
+
+
+* MERGE A BRANCH
+git checkout master (or main)
+git pull origin master (or main)
+git branch --merged
+git merge <branch_name>
+git push origin master (or main)
+
+
+* DELETING A BRANCH (when you are done coding a feature)
+git branch --merged
+git branch -d <branch_name> (delete locally)
+git branch -a
+git push origin --delete <branch_name> (delete from remote repo)
+
+
+(*) A NORMAL DAY TO DAY WORKFLOW
+git branch <something>
+git checkout <something>
+// make code changes //
+git status
+git add -A
+git commint -m "Comment"
+git push -u origin <something>
+git checkout master (or main)
+git pull origin master (or main)
+git merge <something>
+git push origin master
+git branch --merged
+git branch -d <branch_name> (delete locally)
+git branch -a
+git push origin --delete <branch_name> (delete from remote repo)
+
+
+
