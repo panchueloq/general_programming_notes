@@ -55,10 +55,33 @@ df['column_name'].value_counts()   (specific values count)
 df.set_index('col_name', inplace=True)   (inplace needed to save changes)
 df.reset_index(inplace=True)
 
-// To set it when reading //
+// To set index when reading //
 df = pd.read_csv("<place/csv_file.csv>", index_col = "col_name")
 
 
 // SORT ALPHABETICALLY //
 schema_df.sort_index()
 schema_df.sort_index(ascending=False)  (REVERSE)
+
+
+// FILTERING //
+df['col_name'] == 'smth'
+filt = (df['col_name'] == 'smth')  (brackets not necessary)
+df[filt]  (apply)
+df.loc[filt]   (also apply, recommended)
+df.loc[filt, 'email']   (filter and get specific column)
+
+filt = (df['last'] == 'Doe') & (df['first'] == 'John')   (AND filter)
+filt = (df['last'] == 'Schafer') | (df['first'] == 'John')   (OR filter)
+
+df.loc[~filt]   (Opposite filter)
+
+high_salary = (df['Salary'] > 70000)   (numbers)
+df.loc[high_salary, ['col_1', 'col_2', 'col_3']]   (specific columns)
+
+// To check if contained in specific list //
+countries = ['United States', 'India', 'United Kingdom', 'Germany', 'Canada']
+filt = df['Country'].isin(countries)
+
+// String Methods //
+filt = df['LanguageWorkedWith'].str.contains('Python', na=False)
