@@ -1,0 +1,64 @@
+// IMPORT // 
+import pandas as pd
+
+
+// READ //
+df = pd.read_csv("<place/csv_file.csv>")
+
+
+// DISPLAY COLUMNS AND ROWS //
+pd.set_option('display.max_columns', <NUMBER>)
+pd.set_option('display.max_rows', <NUMBER>)
+
+
+// ATTRIBUTES //
+df.shape 
+df.columns (see all columns)
+
+
+// SEE DATAFRAME //
+df (or any name) to see default display
+df.head(<optional_number>) to see first rows
+df.tail(<optional_number>) to see last rows
+df.info()
+
+
+// CREATE DATA FRAME //
+df = pd.DataFrame(<dict>)
+
+
+// ACCESS COLUMNS //
+df["col_name"]
+df.col_name  (not recommended)
+df["col_1", "col_2"]
+
+
+// ACCESS ROWS //
+df.iloc[]  (by index)
+df.iloc[[0, 1]]  (list of rows)
+df.iloc[[0, 1], 2]  (specific column)
+df.loc[]  (by label)
+df.loc[[0, 1]] 
+df.loc[[0, 1], 'email'] 
+df.loc[[0, 1], ['email', 'last']]  (columns displayed in order)
+
+
+// SLICING //
+df.loc[0:2, "col_2":"col_6"]   (slicing is inclusive here)
+
+
+// ANALYSIS //
+df['column_name'].value_counts()   (specific values count)
+
+
+// SETTING INDEX //
+df.set_index('col_name', inplace=True)   (inplace needed to save changes)
+df.reset_index(inplace=True)
+
+// To set it when reading //
+df = pd.read_csv("<place/csv_file.csv>", index_col = "col_name")
+
+
+// SORT ALPHABETICALLY //
+schema_df.sort_index()
+schema_df.sort_index(ascending=False)  (REVERSE)
