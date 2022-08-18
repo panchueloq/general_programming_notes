@@ -8,6 +8,9 @@ git config --global user.email "email@"
 
 git config --list
 
+* CREDENTIALS
+git config credential.helper store
+
 
 * HELP:
 git help config || git config --help
