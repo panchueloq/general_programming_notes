@@ -8,7 +8,7 @@ git config --global user.email "email@"
 
 git config --list
 
-* CREDENTIALS
+* CREDENTIALS and stuff
 git config credential.helper store
 
 
