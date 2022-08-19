@@ -10,6 +10,7 @@ git config --list
 
 * CREDENTIALS and stuff
 git config credential.helper store
+git config --unset credential.helper
 
 
 * HELP:
