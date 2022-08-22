@@ -64,6 +64,10 @@ schema_df.sort_index()
 schema_df.sort_index(ascending=False)  (REVERSE)
 
 
+// SHIFTING INDEX //
+.shift(periods = x)
+
+
 // FILTERING //
 df['col_name'] == 'smth'
 filt = (df['col_name'] == 'smth')  (brackets not necessary)
