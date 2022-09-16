@@ -1,0 +1,19 @@
+Create Virtual Environment
+- python3 -m venv <venv_name>
+
+Activate Virtual Environment
+- source <venv_name>/bin/activate
+
+Attach to Jupyter
+- pip install ipykernel
+- deactivate (to install kernel outside venv)
+- python3 -m ipykernel install --name=<venv_name> --user
+
+Check Jupyter Kernels
+- jupyter kernelspec list
+
+Remove kernel from Jupyter
+- jupyter kernelspec uninstall <venv_name>
+
+Open Jupyter Lab
+- jupyter lab
