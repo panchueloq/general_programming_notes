@@ -2,7 +2,8 @@ Create Virtual Environment
 - python3 -m venv <venv_name>
 
 Activate Virtual Environment
-- source <venv_name>/bin/activate
+- source <venv_name>/bin/activate (Linux)
+- <venv_name>\Scripts\activate
 
 Attach to Jupyter
 - pip install ipykernel
